@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - 12.21.0
+install:
+  - npm install
+script:
+  - nodemon server.js
+branches:
+  only:
+    - master
+deploy:
+  provider: heroku
+  api_key:
+    secure: f1Gr/wtG1z6Qx0WNZmEJCAxMx13HYmh5qJyPfdL+6PfpSrJT+F+Q1XYBLw9eT/Nj4TNBCLbBh8Hhenxf6a/zv1sRWC5fOqW7C4r+5vhHMDelt/vewpY4dSCWuSvJngN/EYPkCwQU+L/ep1tRBtTUr051Sk3ZBrhWsICwEW43515A3h/2AU5NygFsfoYl+oEZa0biWlEncXjpU6X+aWL9c/xOwh54le7iNizHcFDOU5ZF9bD5nInYJwAcSJHSGUN5QsBAluUSvM2ubeUpSs9bm0Y3a0E1EDlcO/GCnTAOfKyS5fvJmeAeZ40pk+1HMjoAgSElmjN2VpqGrIRjcBG0I87Wy845e80XTHpVaTRlZ3unbfD9aTwZWp7Uo6ohow0yZk5puCvqeGsgSNHaJs3/6SolmLcGABA32WTDSF1ky4b28xqQHpZqoI9lwyE/UmyoF4qD+kFZObKopLXT6gj8zQd3Ara8VjNaEu/1CFEaoFeXck/tn52Wn7ux0jAxIwtRdBXFqogIsT/H/9BcBKsYX/Hp1GUlH81gQG+bA3JJw1D7qcfhnxO/ds9rdA2KcRB9TfPXu69DyHgdf1+LmY5Q7Hpcu56/K3a7CgzE0owAz6ORYmFpfMdDwzDzkG05u3WK0oP8y609KY6/TLZx4Dw+kJ30jiNbVHflWSHMWRPk+/Q=
+  app:
+    master: app-gestpharmacy
