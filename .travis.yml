@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - 12.21.0
-install:
+before_deploy:
   - npm install
 script:
   - nodemon server.js
